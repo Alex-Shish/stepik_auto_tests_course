@@ -25,11 +25,11 @@ links = [
 
 #  The owls are not what they seem! OvO
 
-for i in range(len(links)):
+for i in links:
     def test_should_see_result_link():
         try:
             browser = webdriver.Chrome()
-            browser.get(links[i])
+            browser.get(i)
             time.sleep(3)
             button = browser.find_element(By.CSS_SELECTOR, ".ember-view.navbar__auth.navbar__auth_login")
             button.click()
